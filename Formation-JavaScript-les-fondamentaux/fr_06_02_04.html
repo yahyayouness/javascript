@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>onClick</title>
+  <script>
+    window.onload = function(){
+      var the_button = document.getElementById('the_button');
+      the_button.onclick = function(e){
+        console.dir(e);
+      }
+    }
+  </script>
+</head>
+<body>
+<input type="button" id="the_button" value="Click">
+</body>
+</html>

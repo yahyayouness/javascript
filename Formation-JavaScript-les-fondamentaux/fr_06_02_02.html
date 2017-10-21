@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>onClick</title>
+  <script>
+
+  function doClick(e){
+    console.log("click button");
+    console.dir(e);
+  }
+
+  function doClickDiv(e){
+    console.log("click div");
+    console.dir(e);
+  }
+  </script>
+</head>
+<body>
+  <div onclick="doClickDiv(event)">
+    <input type="button" onclick="doClick(event)" value="Click">
+  </div>
+</body>
+</html>

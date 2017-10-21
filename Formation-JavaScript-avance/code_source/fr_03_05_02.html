@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <script>
+
+  var obj = function(){
+    this.name="obj";
+
+    this.getName=function(){
+      console.log(this);
+      return this.name;
+    }
+  }
+
+    var o = new obj();
+    o.getName();
+
+  </script>
+
+
+</head>
+
+<body>
+</body>
+
+</html>

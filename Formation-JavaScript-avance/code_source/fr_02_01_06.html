@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <script>
+    function sayHello() {
+      console.log('Hello');
+      return function() {
+        console.log('World');
+      };
+    }
+    var func = sayHello();
+    func();
+  </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

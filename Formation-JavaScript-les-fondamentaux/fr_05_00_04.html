@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>For</title>
+  <script>
+
+    var Personne = function(p_nom,p_prenom){
+      this.nom = p_nom;
+      this.prenom = p_prenom;
+      this.afficheNom = function(){
+        console.log('nom : '+this.nom);
+      }
+    };
+
+    var p = new Personne("DURAND","Robert");
+    p.afficheNom();
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

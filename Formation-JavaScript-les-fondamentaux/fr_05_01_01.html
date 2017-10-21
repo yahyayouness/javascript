@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>For</title>
+  <script>
+    var Personne = function(p_nom,p_prenom){
+      this.nom = p_nom;
+      this.prenom = p_prenom;
+    }
+
+    Personne.prototype.age = 30;
+    Personne.prototype.getAge = function(){
+      return this.age;
+    };
+
+    var p = new Personne("DURANT",'Robert');
+    var p2 = new Personne("DURANT",'Robert');
+    Personne.prototype.age = 130;
+    console.log(p.getAge());
+    console.log(p2.getAge());
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

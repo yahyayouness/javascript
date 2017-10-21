@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>onClick</title>
+  <script>
+    window.onload = function(){
+      var btn_submit = document.getElementById('btn_submit');
+      btn_submit.onclick = function(){
+        console.dir(document.forms[0].elements.nom.value);
+        console.dir(document.forms[0].elements['prenom'].value);
+        console.dir(document.forms[0].elements[2].value);
+      }
+
+    }
+  </script>
+</head>
+<body>
+  <form name="le_form">
+    <input type="text" name="nom" placeholder="nom"><br/>
+    <input type="text" name="prenom" placeholder="prenom"><br/>
+    <input type="email" name="email" placeholder="email"><br/>
+    <input type="button" value="envoyer" id="btn_submit">
+  </form>
+</body>
+</html>

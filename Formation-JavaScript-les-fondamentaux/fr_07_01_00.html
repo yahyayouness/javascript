@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+  window.onload = function(){
+    document.forms.le_form.onsubmit = function(){
+      var le_form = document.forms.le_form;
+      var data = {};
+      for(var i = 0; i<le_form.length;i++){
+        if(le_form[i].name){
+          data[le_form[i].name] = le_form[i].value;
+        }
+      }
+
+      var strObj = JSON.stringify(data);
+
+      var xhr = new XMLHttpRequest();      
+      xhr.open('POST','/gens',true);
+      xhr.setRequestHeader('Content-Type','application/json; charset=UTF-8');
+      xhr.onreadystatechange = function(){
+        if(xhr.readyState == 4 && xhr.status == 200)
+          console.log("OK");
+        else {
+          console.error("KO");
+        }
+      }
+
+      xhr.send(strObj);
+
+      return false;
+    }
+  }
+  </script>
+</head>
+<body>
+
+
+<form name="le_form" >
+  nom : <input type="text" name="nom" value=""><br/>
+  prenom : <input type="text" name="prenom" value=""><br/>
+  <input type="submit" value="envoyer">
+</form>
+
+</body>
+</html>

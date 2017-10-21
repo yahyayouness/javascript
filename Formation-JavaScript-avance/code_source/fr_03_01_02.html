@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <script>
+
+  var client = function(n,p){
+    this.nom = n;
+    this.prenom = p;
+  }
+
+  client.prototype.age = 40;
+  client.prototype.getAge = function(){
+    return this.age;
+  }
+
+  var client_1 = new client('DUPONT','Robert');
+  var client_2 = new client('MARTIN','Jean');
+
+  console.log(client_1.getAge());
+
+  console.dir(client_1);
+  console.dir(client_2);
+
+
+  </script>
+
+
+</head>
+
+<body>
+</body>
+
+</html>

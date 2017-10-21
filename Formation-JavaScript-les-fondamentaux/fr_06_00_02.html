@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Form</title>
+</head>
+<body>
+  <form class="" action="index.html" method="post" name="le_form">
+    nom : <input type="text" name="txt_nom" value="DURAND"><br/>
+    Oui/non : <input type="checkbox" name="chk_yes" >
+  </form>
+
+  <script type="text/javascript">
+    var form = document.forms['le_form'];
+    var txt_nom = form.txt_nom;
+    var chk_yes = form.chk_yes;
+    console.dir(txt_nom.value);
+    console.dir(chk_yes.checked);
+  </script>
+</body>
+</html>

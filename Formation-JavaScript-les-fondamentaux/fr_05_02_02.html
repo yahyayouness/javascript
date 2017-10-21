@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    var monSingleton = (function(){
+      var instance;
+      function init(){
+        var hello = 'Hello '+Math.random();
+        return  {
+          sayHello : function(){
+            console.log(hello);
+          }
+        }
+      }
+
+
+      return{
+        getInstance:function(){
+          if(!instance)
+            instance = init();
+
+          return instance;
+        }
+      }
+
+
+    })();
+
+
+    var obj = monSingleton.getInstance();
+    var obj2 = monSingleton.getInstance();
+
+    obj.sayHello();
+    obj2.sayHello();
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

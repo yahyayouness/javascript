@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <script>
+    var p1 = new Promise(function(resolve, reject) {
+      setTimeout(function() {
+        var a = 1;
+        resolve(a);
+      }, 2000);
+    });
+
+    p1
+      .then(function(result_a) {
+        var p2 = new Promise(function(resolve, reject) {
+          setTimeout(function() {
+            var b = 2;
+            resolve(b + result_a);
+          }, 3000);
+        });
+        return p2;
+      })
+      .then(function(result_a_b) {
+        console.log(result_a_b);
+      });
+
+
+  </script>
+
+
+</head>
+
+<body>
+</body>
+
+</html>

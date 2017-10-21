@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    window.onload = function(){
+      var btn = document.getElementById('btn');
+      btn.onclick = function(){
+        var le_paragraphe = document.getElementById("le_paragraphe");
+        if(le_paragraphe.style.visibility == "hidden"){
+            le_paragraphe.style.visibility='visible';
+        }
+        else le_paragraphe.style.visibility='hidden';
+
+      }
+
+      var le_paragraphe = document.getElementById("le_paragraphe");
+      //background-color
+      le_paragraphe.style.backgroundColor = 'yellow';
+    }
+  </script>
+</head>
+<body>
+
+  <p id="le_paragraphe">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, cum odit quia obcaecati facere est laborum beatae ullam, ipsa nobis, dolores impedit? Optio pariatur iusto doloremque, asperiores rem ratione quis!
+  </p>
+  <br/>
+    <button id="btn">Afficher/Masquer</button>
+</body>
+</html>

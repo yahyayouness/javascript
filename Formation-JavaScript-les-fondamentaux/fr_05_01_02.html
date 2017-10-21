@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>For</title>
+  <script>
+
+    Array.prototype.showAll = function(){
+      for(var i = 0;i<=this.length-1;i++){
+        console.log( '['+i+'] '+this[i]);
+      }
+    };
+
+    var arr = ["un","deux","trois"];
+
+    arr.showAll();
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <script>
+
+
+    var jours = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+
+    for(var i = 0; i<jours.length;i++){
+      console.log(jours[i]);
+    }
+
+    var assoc_jours = {
+      'jour_0':'Dimanche',
+      'jour_1':'Lundi',
+      'jour_2':'Mardi',
+      'jour_3':'Mercredi',
+      'jour_4':'Jeudi',
+      'jour_5':'Vendredi',
+      'jour_6':'Samedi'
+    };
+
+    //on utilise la notation tableau traditionnelle
+    console.log(assoc_jours['jour_1']);
+
+    //ou une boucle
+    for(key in assoc_jours){
+      console.log(key+' : '+assoc_jours[key]);
+    }
+
+  </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

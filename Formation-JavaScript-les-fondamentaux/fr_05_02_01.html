@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    var monMondule = (function(){
+        var cpt = 0;
+        return {
+          incrementCompteur : function(){
+            return cpt++;
+          }
+        }
+
+    })();
+
+
+    var i = monMondule.incrementCompteur();
+    console.log(i);
+    i = monMondule.incrementCompteur();
+    console.log(i);
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

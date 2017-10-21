@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <script>
+
+  var client = function(){
+    console.log('Construction de client');
+  };
+
+  function newConstructor(){
+    console.log('Construction de client avec le nouveau constructeur');
+  }
+
+
+  client.prototype.constructor = newConstructor;
+  var c = new client();
+  console.dir(c.constructor);
+
+  </script>
+
+
+</head>
+
+<body>
+</body>
+
+</html>

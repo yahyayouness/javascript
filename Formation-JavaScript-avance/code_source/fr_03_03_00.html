@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <script>
+
+  var client = function(n,p){
+    this.nom = n;
+    this.prenom = p;
+
+    this.affiche = function(){
+      console.log(this.nom+" "+this.prenom);
+    }
+  };
+
+  var c = new client("DUPONT","Robert");
+  console.log(c.nom);
+  console.log(c.prenom);
+  c.affiche();
+
+
+
+  </script>
+
+
+</head>
+
+<body>
+</body>
+
+</html>

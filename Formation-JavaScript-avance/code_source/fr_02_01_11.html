@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <script>
+    // https://developer.mozilla.org/fr/docs/Web/JavaScript/Closures
+
+    function créerFonction() {
+      var nom = "Mozilla";
+
+      function afficheNom() {
+        alert(nom);
+      }
+      return afficheNom;
+    };
+
+    var maFonction = créerFonction();
+    maFonction();
+
+
+  </script>
+
+</head>
+
+<body>
+</body>
+
+</html>
